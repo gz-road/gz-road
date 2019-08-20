@@ -4,19 +4,20 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>公路养护辅助决策分析</title>
-    <script src="http://api.map.baidu.com/api?v=2.0&ak=INqth77f5jzQadrUvwDO9saQ" type="text/javascript">
-    </script>
-    <script src="http://api.map.baidu.com/library/Heatmap/2.0/src/Heatmap_min.js" type="text/javascript">
-    </script>
+    <!--引入样式文件-->
     <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
-    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.js"></script>
     <link href="./font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="./css/map-ui.css" rel="stylesheet" type="text/css">
     <link href="css/baseall.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <!--引入js文件-->
+    <script src="./jquery/jquery2.1.1.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./jquery/jquery.SuperSlide.2.1.1.js"></script>
     <!--引入echarts-->
     <script src="./3.3.1/echarts.js"></script>
+    <!--时间选择器-->
     <link href="./datetimepicker/css/bootstrap-datetimepicker.min.css" media="screen" rel="stylesheet">
                                               
 </head>
@@ -96,7 +97,92 @@
                                 <h3 class="titleall">工程建设状态</h3>
                             </div>
                             <div class="inner_content">
-                                <div class="progressBar">数据加载中，请稍等...</div>
+                                <div class="project_status">
+                                    <div class="list_name">
+                                        <ul class="list_road">
+                                            <li>
+                                                <p class="categary_name">日期</p>
+                                                <p class="categary_name">项目名称</p>
+                                                <p class="categary_name">项目属性</p>
+                                                <p class="categary_name">建设单位</p>
+                                                <p class="categary_name">进度</p>
+                                                <p class="categary_name">资金(万元)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="txtMarquee-top">
+                                        <div class="list_content bd">
+                                            <ul class="list_road">
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_high">96%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_high">92%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_mid">96%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_mid">92%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_low">96%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_low">92%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_low">96%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                                <li>
+                                                    <p class="categary_name">2019/6/23</p>
+                                                    <p class="categary_name">某路段养护...</p>
+                                                    <p class="categary_name">日常养护</p>
+                                                    <p class="categary_name">贵州城乡建...</p>
+                                                    <p class="categary_name speed_low">92%</p>
+                                                    <p class="categary_name">45.2</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -132,33 +218,17 @@
     </div>
 </body>
     
-     <!--<script src="./js/trafficoverview.js"></script>-->
-    <!-- 日期选择器 -->
-    <script charset="UTF-8" src="./datetimepicker/jquery/jquery-1.8.3.min.js" type="text/javascript">
-    </script>
-    <script charset="UTF-8" src="./datetimepicker/js/bootstrap-datetimepicker.js" type="text/javascript">
-    </script>
-    <script charset="UTF-8" src="./datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" type="text/javascript">
-    </script>
-    <script>
-        $('.form_date').datetimepicker({
-    language:  'zh-CN',
-    weekStart: 1,
-    todayBtn:  1,
-    autoclose: 1,
-    todayHighlight: 1,
-    startView: 2,
-    minView: 2,
-    forceParse: 0
-    });
-// 按钮点击选框图片切换
-$(function(){
-  $('.block').toggle(function() {
-    $(this).addClass('on');
-  }, function() {
-     $(this).removeClass('on');
-  });
-   
-})
-    </script>
+
+
+<script type="text/javascript">
+    jQuery(".txtMarquee-top")
+        .slide({
+            mainCell:".bd ul",
+            autoPlay:false,
+            effect:"topMarquee",
+            vis:6,
+            interTime:50
+        });
+</script>
+
 </html>
