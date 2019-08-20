@@ -1,0 +1,200 @@
+/* CSS Document */
+@charset "utf-8";
+
+* {
+    font-family: 'microsoft yahei';
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/****************2019.8.16  公路辅助决策分析页面*****************/
+body.bg {
+    background: url(../img/bg.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Microsoft Yahei';
+}
+
+/* 头部标题 */
+.top-title {
+    height: 40px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.titlepic {
+    width: auto;
+    height: 100%;
+    margin: 35px 0 0 0;
+}
+
+.titlepic img {
+    height: 100%;
+}
+
+/* 页面整体布局边框 */
+.main-body {
+    padding: 20px 0 30px 0;
+}
+
+.border {
+    height: 100%;
+    width: 100%;
+    background: url(../img/border.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.border-map {
+    height: 100%;
+    width: 100%;
+    background: url(../img/map-border.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.inter-area1 {
+    padding: 0 14px 14px 0;
+}
+
+.inter-area2 {
+    padding: 0 14px 0 0;
+}
+
+.inter-area3 {
+    padding: 0 0 14px 14px;
+}
+
+.inter-area4 {
+    padding: 0 0 0 14px;
+}
+
+/*页面标题*/
+.title {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+}
+
+.titleall {
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    margin: 0 0 0 10px;
+}
+
+/* 地图 */
+#map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.inner_content {
+    height: 90%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#line1, #keywords, #line2 {
+    height: 82%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#connect1, #connect2 {
+    height: 89%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-height: 1000px) {
+    /*标题*/
+    .title {
+        height: 25px;
+    }
+    .titleall {
+        line-height: 25px;
+    }
+    /*头部标题*/
+    .titlepic {
+        margin: 30px 0 0 0;
+    }
+}
+
+@media (max-height: 870px) {
+
+}
+
+@media (max-width: 1366px) {
+    body.bg { /* padding:10px 35px 25px 35px; */
+    }
+
+    .main-body {
+        padding: 10px 0 15px 0;
+    }
+    /*头部标题*/
+    .top-title {
+        height: 30px;
+    }
+
+    .titlepic {
+        margin: 25px 0 0 0;
+    }
+
+    .title {
+        height: 20px;
+    }
+
+    .titleall {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 0 10px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    /*头部标题*/
+    .top-title {
+        height: 25px;
+    }
+
+    .titlepic {
+        margin: 25px 0 0 0;
+    }
+
+}
+
+@media (max-height: 650px) {
+    body.bg {
+        /*padding: 8px 35px 20px 35px;*/
+    }
+    /*头部标题*/
+    .top-title {
+        height: 28px;
+    }
+
+    .titlepic {
+        margin: 18px 0 0 0;
+    }
+
+    .title {
+        height: 16px;
+    }
+
+    .titleall, .titlemap, .en-title {
+        line-height: 16px;
+    }
+}
