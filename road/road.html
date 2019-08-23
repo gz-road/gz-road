@@ -11,12 +11,14 @@
     <link href="./css/map-ui.css" rel="stylesheet" type="text/css">
     <link href="css/baseall.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/roadTSF.css" rel="stylesheet" type="text/css"/>
     <!--引入js文件-->
     <script src="./jquery/jquery2.1.1.min.js"></script>
     <script src="./bootstrap/js/bootstrap.js"></script>
     <script src="./jquery/jquery.SuperSlide.2.1.1.js"></script>
     <!--引入echarts-->
     <script src="./3.3.1/echarts.js"></script>
+    <script type="text/javascript" src="echarts/echarts.js"></script>
     <!-- 高德地图key -->
     <script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.15&key=07c9eda3b54a3384d29a8bc9c996cf79'></script>
     <!-- 高德地图 UI组件库 1.0 -->
@@ -253,7 +255,24 @@
                                 <h3 class="titleall">路面技术状况预测</h3>
                             </div>
                             <div class="inner_content">
-                                <div class="progressBar">数据加载中，请稍等...</div>
+                                <div class="progressBar">
+                                    <!--*************author:ShenHongYang***************-->
+                                    <div class="road_forecast">
+                                        <div class="tab_title" id="tab_title">
+                                            <ul class="tab">
+                                                <li id="money_input">资金投入</li>
+                                                <li id="plan">十三五规划</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="roadForecast_picture">
+                                        <div  id="forecast_moneyLine" ></div>
+                                        <div  id="forecast_planLine" class="picture_one"></div>
+                                        <script type="text/javascript" src="js/forecastMoneyLine.js"></script>
+                                        <script type="text/javascript" src="js/forecastPlanLine.js"></script>
+                                    </div>
+                                    <script type="text/javascript" src="js/switch.js"></script>
+                                </div>
                             </div>
                         </div>
                     </div>
