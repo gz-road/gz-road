@@ -4,7 +4,7 @@ ul, li {
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
+
 /*天气预报样式*/
 .top-content{
 	position: relative;
@@ -233,7 +233,12 @@ ul.road-list>li>div{position:relative;width: 42%;float: left;margin-top: 5px;bor
 ul .progress{height: 6px;margin: 0;border-radius: 9px;background-color: rgba(0, 170, 255, 0.2);}
 ul.road-list>li div.progress-bar{background: -webkit-linear-gradient(left,#1fadff,    #1fadff);}
 
-
+/* 公路技术状况评定饼图样式 */
+#ring {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
 
 /* 地图 */
 #map1, #map2, #map3, #map4  {

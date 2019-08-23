@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
-
 	<head>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,8 +12,7 @@
 		<link href="css/baseall.css" rel="stylesheet" type="text/css">
 		<link href="css/index.css" rel="stylesheet" type="text/css" />
 		<link href="css/pick-pcc.min.1.0.1.css" rel="stylesheet" type="text/css">
-
-		<link href="css/ring.css" rel="stylesheet" type="text/css" />
+		<!--<link href="css/ring.css" rel="stylesheet" type="text/css" />-->
 		<!--引入js文件-->
 		<script src="./jquery/jquery2.1.1.min.js"></script>
 		<script src="./bootstrap/js/bootstrap.js"></script>
@@ -81,10 +79,78 @@
 								<div class="title">
 									<h3 class="titleall">路网资产</h3>
 								</div>
-								<div class="inner_content">
-									<div class="half"></div>
-								</div>
-							</div>
+                                <div class="inner_content">
+                                    <div class="half">
+                                        <div class="cricle_bg">
+                                            <!--<div class="center_type">-->
+                                            <!--<div class="center_circle">路面</div>-->
+                                            <!--<div class="center_circle">桥梁</div>-->
+                                            <!--<div class="center_circle">隧道</div>-->
+                                            <!--</div>-->
+                                            <div class="type">
+                                                <div class="type_name"><p id="text1">行政等级</p></div>
+                                                <div class="type_name"><p id="text2">技术等级</p></div>
+                                                <div class="type_name"><p id="text3">路面类型</p></div>
+                                            </div>
+
+                                            <div id="typepie">
+                                                <div class="progressBar"> 数据加载中，请稍等...</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--路网资产分类排行列表-->
+                                    <div class="half_r">
+                                        <ul class="road-list">
+                                            <li class="list">
+                                                <p class="category"><span class="list_num">1</span>国道</p>
+                                                <div class="progress-piece">
+                                                    <div class="progress">
+                                                        <div class="progress-bar high" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65.28%;"> </div>
+                                                    </div>
+                                                </div>
+                                                <span class="num">65.28%</span>
+                                            </li>
+                                            <li class="list">
+                                                <p class="category"><span class="list_num">2</span>省道</p>
+                                                <div class="progress-piece">
+                                                    <div class="progress">
+                                                        <div class="progress-bar high" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 46.12%;"> </div>
+                                                    </div>
+                                                </div>
+                                                <span class="num">46.12%</span>
+                                            </li>
+                                            <li class="list">
+                                                <p class="category"><span class="list_num">3</span>县道</p>
+                                                <div class="progress-piece">
+                                                    <div class="progress">
+                                                        <div class="progress-bar high" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30.25%;"> </div>
+                                                    </div>
+                                                </div>
+                                                <span class="num">30.25%</span>
+                                            </li>
+                                            <li class="list">
+                                                <p class="category"><span class="list_num">4</span>乡道</p>
+                                                <div class="progress-piece">
+                                                    <div class="progress">
+                                                        <div class="progress-bar high" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20.47%;"> </div>
+                                                    </div>
+                                                </div>
+                                                <span class="num">20.47%</span>
+                                            </li>
+                                            <li class="list">
+                                                <p class="category"><span class="list_num">5</span>专道</p>
+                                                <div class="progress-piece">
+                                                    <div class="progress">
+                                                        <div class="progress-bar high" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 6.96%;"> </div>
+                                                    </div>
+                                                </div>
+                                                <span class="num">6.96%</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
 						</div>
 					</div>
 					<!-- 资金投资情况 -->
@@ -108,9 +174,11 @@
 									<h3 class="titleall">公路技术状况评定</h3>
 								</div>
 								<!-- 左下环图图表 -->
-								<div id="ring"></div>
 								<div class="inner_content">
-									<div class="progressBar"> 数据加载中，请稍等...</div>
+                                    <div id="ring">
+                                        <div class="progressBar"> 数据加载中，请稍等...</div>
+                                    </div>
+
 								</div>
 							</div>
 						</div>
@@ -312,168 +380,168 @@
 				</div>
 			</div>
 		</div>
+    <script type="text/javascript">
+        <!-- 左下环图图表 -->
+        var myChart = echarts.init(document.getElementById('ring'));
 
-		<!-- 左下环图图表 -->
-		<script type="text/javascript">
-			var myChart = echarts.init(document.getElementById('ring'));
+        //准备背景图片
+        var ylvIcon = "img/icon_ylv.png";
+        var clvIcon = "img/icon_clv.png";
+        var ringBg = "img/xb_bg.png";
 
-			//准备背景图片
-			var ylvIcon = "img/icon_ylv.png";
-			var clvIcon = "img/icon_clv.png";
-			var ringBg = "img/xb_bg.png";
+        option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} '\n' {b} : {c} ({d}%)"
+            },
+            calculable: true,
+            // 控制x和y轴
+            xAxis: {
+                max: 10,
+                show: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            yAxis: {
+                max: 10,
+                show: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            series: [
+                //添加背景图片  左右两个图标
+                {
+                    type: 'scatter',
+                    zlevel: 60,
+                    itemStyle: {
+                        opacity: 1 // 控制 满意icon的 透明度
+                    },
+                    data: [{ // 外圈 点状圈
+                        value: 5,
+                        symbol: 'image://' + ringBg,
+                        symbolSize: 128, //调整添加图片的大小
+                        symbolOffset: [0, 0]
+                    },
+                        { // 左侧  icon
+                            value: 5,
+                            symbol: 'image://' + ylvIcon,
+                            symbolSize: 25,
+                            symbolOffset: [-46, 7], //移动图标位置
+                            opacity: 1
+                        },
+                        { //右侧  icon
+                            value: 5,
+                            symbol: 'image://' + clvIcon,
+                            symbolSize: 25,
+                            symbolOffset: [45, -5],
+                            opacity: 1
+                        }
+                    ]
 
-			option = {
-				tooltip: {
-					trigger: 'item',
-					formatter: "{a} <br/>{b} : {c} ({d}%)"
-				},
-				calculable: true,
-				// 控制x和y轴
-				xAxis: {
-					max: 10,
-					show: false,
-					splitLine: {
-						show: false
-					}
-				},
-				yAxis: {
-					max: 10,
-					show: false,
-					splitLine: {
-						show: false
-					}
-				},
-				series: [
-					//添加背景图片  左右两个图标
-					{
-						type: 'scatter',
-						zlevel: 60,
-						itemStyle: {
-							opacity: 1 // 控制 满意icon的 透明度
-						},
-						data: [{ // 外圈 点状圈
-								value: 5,
-								symbol: 'image://' + ringBg,
-								symbolSize: 128, //调整添加图片的大小
-								symbolOffset: [0, 0]
-							},
-							{ // 左侧  icon
-								value: 5,
-								symbol: 'image://' + ylvIcon,
-								symbolSize: 25,
-								symbolOffset: [-46, 7], //移动图标位置
-								opacity: 1
-							},
-							{ //右侧  icon
-								value: 5,
-								symbol: 'image://' + clvIcon,
-								symbolSize: 25,
-								symbolOffset: [45, -5],
-								opacity: 1
-							}
-						]
+                },
+                {
+                    type: 'pie',
+                    radius: [30, 40],
+                    center: ['50%', '50%'],
+                    color: "#ff6161",
+                    data: [{
+                        value: 34,
 
-					},
-					{
-						type: 'pie',
-						radius: [30, 40],
-						center: ['50%', '50%'],
-						color: "#ff6161",
-						data: [{
-								value: 34,
+                        label: {
+                            color: "rgba(255,255,255,.45)",
+                            fontSize: 14,
+                            formatter: '{p10| 次差路率}\n{a|39.53%}\n{b|10234}',
+                            //设置指示文本样式
+                            rich: {
+                                a: {
+                                    color: "#ff6161",
+                                    fontSize: 18,
+                                    lineHeight: 15, //设置行高
+                                    padding: [40, 10, 0, 0]
+                                },
+                                b: {
+                                    color: "#ff6161",
+                                    fontSize: 14,
+                                    lineHeight: 15,
+                                    padding: [30, 10, 0, 0]
+                                },
+                                p10: {
+                                    padding: [30, 10, 65, 0],
+                                    color: '#afc3da',
+                                    fontSize: 14
+                                }
+                            }
+                        },
+                        //指示线
+                        labelLine: {
+                            show: true,
+                            length: 20,
+                            length2: 30
+                        },
+                    },
+                        {
+                            value: 52,
+                            itemStyle: {
+                                color: "transparent"
+                            }
+                        }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    radius: [30, 45],
+                    center: ['50%', '50%'],
+                    color: "#1fadff",
+                    data: [{
+                        value: 34,
+                        itemStyle: {
+                            color: "transparent"
+                        }
+                    },
+                        {
+                            value: 52,
+                            name: 'rose2',
 
-								label: {
-									color: "rgba(255,255,255,.45)",
-									fontSize: 14,
-									formatter: '{p10| 次差路率}\n{a|39.53%}\n{b|10234}',
-									//设置指示文本样式
-									rich: {
-										a: {
-											color: "#ff6161",
-											fontSize: 18,
-											lineHeight: 15, //设置行高
-											padding: [40, 10, 0, 0]
-										},
-										b: {
-											color: "#ff6161",
-											fontSize: 14,
-											lineHeight: 15,
-											padding: [30, 10, 0, 0]
-										},
-										p10: {
-											padding: [30, 10, 65, 0],
-											color: '#afc3da',
-											fontSize: 14
-										}
-									}
-								},
-								//指示线
-								labelLine: {
-									show: true,
-									length: 20,
-									length2: 30
-								},
-							},
-							{
-								value: 52,
-								itemStyle: {
-									color: "transparent"
-								}
-							}
-						]
-					},
-					{
-						type: 'pie',
-						radius: [30, 45],
-						center: ['50%', '50%'],
-						color: "#1fadff",
-						data: [{
-								value: 34,
-								itemStyle: {
-									color: "transparent"
-								}
-							},
-							{
-								value: 52,
-								name: 'rose2',
+                            label: {
+                                color: "rgba(255,255,255,.45)",
+                                fontSize: 14,
+                                formatter: '{p10| 优良路率}\n{a|60.47%}\n{b|10234}',
+                                rich: {
+                                    a: {
+                                        color: "#1fadff",
+                                        fontSize: 18,
+                                        lineHeight: 15, //设置行高
+                                        padding: [40, 10, 0, 0] //调节文字之间的位置
+                                    },
+                                    b: {
+                                        color: "#1fadff",
+                                        fontSize: 14,
+                                        lineHeight: 15,
+                                        padding: [30, 10, 0, 0]
+                                    },
+                                    p10: {
+                                        padding: [30, 10, 60, 0],
+                                        color: '#afc3da',
+                                        fontSize: 14
+                                    }
+                                }
+                            },
+                            labelLine: {
+                                show: true,
+                                length: 20,
+                                length2: 30
+                            },
+                        }
+                    ]
+                }
+            ]
+        };
 
-								label: {
-									color: "rgba(255,255,255,.45)",
-									fontSize: 14,
-									formatter: '{p10| 优良路率}\n{a|60.47%}\n{b|10234}',
-									rich: {
-										a: {
-											color: "#1fadff",
-											fontSize: 18,
-											lineHeight: 15, //设置行高
-											padding: [40, 10, 0, 0] //调节文字之间的位置
-										},
-										b: {
-											color: "#1fadff",
-											fontSize: 14,
-											lineHeight: 15,
-											padding: [30, 10, 0, 0]
-										},
-										p10: {
-											padding: [30, 10, 60, 0],
-											color: '#afc3da',
-											fontSize: 14
-										}
-									}
-								},
-								labelLine: {
-									show: true,
-									length: 20,
-									length2: 30
-								},
-							}
-						]
-					}
-				]
-			};
-
-			myChart.setOption(option);
-		</script>
+        myChart.setOption(option);
+        window.onresize = myChart.resize;
+    </script>
 	</body>
 	<!--引入js文件-->
 	<script src="datetimepicker/jquery/jquery-1.8.3.min.js"></script>
@@ -482,26 +550,43 @@
 	<!--引入echarts-->
 	<script src="./3.3.1/echarts.js"></script>
 	<script src="./js/main.js" type="text/javascript"></script>
-	<script src="js/triangular.js" type="text/javascript">
-	</script>
-		<script src="./js/map.js" type="text/javascript"></script>
-		<!-- 地图信息选项卡 -->
-		<script type="text/javascript">
-			jQuery(".slideTxtBox")
-				.slide({
-					trigger: "click"
-				});
-		</script>
-		<!--自动滚动-->
-		<script type="text/javascript">
-			jQuery(".txtMarquee-top")
-				.slide({
-					mainCell: ".bd ul",
-					autoPlay: true,
-					effect: "topMarquee",
-					vis: 6,
-					interTime: 50
-				});
-		</script>
+    <script src="./js/roadassets.js" type="text/javascript"></script>
+    <script src="./js/triangular.js" type="text/javascript"></script>
+    <script src="./js/map.js" type="text/javascript"></script>
+    <!-- 地图信息选项卡 -->
+    <script type="text/javascript">
+        jQuery(".slideTxtBox")
+            .slide({
+                trigger: "click"
+            });
+    </script>
+    <!--自动滚动-->
+    <script type="text/javascript">
+        jQuery(".txtMarquee-top")
+            .slide({
+                mainCell: ".bd ul",
+                autoPlay: true,
+                effect: "topMarquee",
+                vis: 6,
+                interTime: 50
+            });
+    </script>
+    <!--文字环形-->
+    <script>
+        $(function(){
+            $("#text1").arctext({
+                radius:60,
+                dir:-1
+            })
+            $("#text2").arctext({
+                radius:60,
+                dir:-1
+            })
+            $("#text3").arctext({
+                radius:60,
+                dir:1
+            })
+        })
+    </script>
 
 </html>
