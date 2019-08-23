@@ -48,6 +48,9 @@ body.bg {
     background-size: 100% 100%;
 }
 .border-map {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
     height: 100%;
     width: 100%;
     background: url(../img/map-border.png) center center no-repeat;
