@@ -1,9 +1,6 @@
 
-var pchat = echarts.init(document.getElementById('forecast_moneyLine'))
+var mpchat = echarts.init(document.getElementById('bothLine_plan'))
 var option = {
-    /*title: {
-        text: '多种资金百分比'
-    },*/
     //用formatter回调函数显示多项数据内容
     tooltip: {
         trigger: 'axis',
@@ -49,7 +46,7 @@ var option = {
         itemWidth:10,
         itemHeight:2,
         itemGap:10,
-        left:90,
+        left:240,
         top:2,
         textStyle:{
             fontFamily:'microsoft yahei',
@@ -57,11 +54,8 @@ var option = {
             color:'#fff',
         },
         data:[
-            { name:'0%', icon:'rect',},
-            { name:'25%', icon:'rect',},
-            { name:'50%', icon:'rect',},
-            { name:'75%', icon:'rect',},
-            { name:'100%', icon:'rect',}
+            { name:'桥梁', icon:'rect',},
+            { name:'隧道', icon:'rect',},
         ]
     },
     grid: {
@@ -102,7 +96,7 @@ var option = {
             }
         },
         axisLine:{
-            show:false
+            show:false,
         },
         axisTick:{
             show:false
@@ -115,7 +109,7 @@ var option = {
     },
     series: [
         {
-            name:'100%',
+            name:'隧道',
             type:'line',
             /*symbol:'circle',*/
             symbolSize:5,
@@ -129,12 +123,11 @@ var option = {
                     }
                 }
             },
-            data:[90,81,70]
+            data:[70,52,60]
         },
         {
-            name:'100%',
+            name:'隧道',
             type:'line',
-            /*  symbol:'circle',*/
             symbolSize:5,
             smooth:true,   //关键点，为true是不支持虚线，实线就用true
             itemStyle:{
@@ -146,11 +139,11 @@ var option = {
                     }
                 }
             },
-            data:["-", "-",70,50,75,55]
+            data:["-", "-",60,50,90,75]
         },
         /******************************/
         {
-            name:'75%',
+            name:'桥梁',
             type:'line',
             /* symbol:'circle',*/
             symbolSize:5,
@@ -160,7 +153,7 @@ var option = {
                     //线性渐变，前4个参数分别是x0,y0,x2,y2(范围0~1);相当于图形包围盒中的百分比。如果最后一个参数是‘true’，则该四个值是绝对像素位置。
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                         offset: 0,
-                        color: 'rgba(0,150,239,0.3)'
+                        color: 'rgba(0,150,239,0.7)'
                     },
                         {
                             offset: 1,
@@ -179,14 +172,30 @@ var option = {
                     }
                 }
             },
-            data:[50,49,36]
+            data:[50,30,46]
         },
         {
-            name:'75%',
+            name:'桥梁',
             type:'line',
             /* symbol:'circle',*/
             symbolSize:5,
             smooth:true,
+            areaStyle:{
+                normal: {
+                    //线性渐变，前4个参数分别是x0,y0,x2,y2(范围0~1);相当于图形包围盒中的百分比。如果最后一个参数是‘true’，则该四个值是绝对像素位置。
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(0,150,239,0.7)'
+                    },
+                        {
+                            offset: 1,
+                            color: 'rgba(0,253,252,0)'
+                        }
+                    ], false),
+                    shadowColor: 'rgba(53,142,215, 0.9)', //阴影颜色
+                    shadowBlur: 20 //shadowBlur设图形阴影的模糊大小。配合shadowColor,shadowOffsetX/Y, 设置图形的阴影效果。
+                }
+            },
             itemStyle:{
                 normal:{
                     color:'#5599ff',
@@ -196,118 +205,14 @@ var option = {
                     }
                 }
             },
-            data:["-", "-",36,58,59,63]
-        },
-        /*************************************/
-        {
-            name:'50%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
-
-            itemStyle:{
-                normal:{
-                    color:'#ffff33',
-                    lineStyle:{
-                        width:3,
-                    }
-                }
-            },
-            data:[30,58,35]
-        },
-        {
-            name:'50%',
-            type:'line',
-            /*  symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,   //关键点，为true是不支持虚线，实线就用true
-            itemStyle:{
-                normal:{
-                    color:'#ffff33',
-                    lineStyle:{
-                        width:3,
-                        type:'dotted'  //'dotted'虚线 'solid'实线
-                    }
-                }
-            },
-            data:["-", "-",35,50,52,40]
-        },
-        /*******************25%***************************/
-        {
-            name:'25%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
-
-            itemStyle:{
-                normal:{
-                    color:'#009fcc',
-                    lineStyle:{
-                        width:3,
-                    }
-                }
-            },
-            data:[20,10,10]
-        },
-        {
-            name:'25%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
-
-            itemStyle:{
-                normal:{
-                    color:'#009fcc',
-                    lineStyle:{
-                        width:3,
-                        type:'dotted'  //'dotted'虚线 'solid'实线
-                    }
-                }
-            },
-            data:["-", "-",10,15,8,7]
-        },
-        /************0%***************/
-        {
-            name:'0%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
-
-            itemStyle:{
-                normal:{
-                    color:'#00ffaa',
-                    lineStyle:{
-                        width:3,
-                    }
-                }
-            },
-            data:[5,20,0]
-        },
-        {
-            name:'0%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,   //关键点，为true是不支持虚线，实线就用true
-            itemStyle:{
-                normal:{
-                    color:'#00ffaa',
-                    lineStyle:{
-                        width:3,
-                        type:'dotted'  //'dotted'虚线 'solid'实线
-                    }
-                }
-            },
-            data:["-", "-",0,0,0,0]
+            data:["-", "-",46,56,65,50]
         },
     ]
 }
-pchat.clear();
-pchat.resize();
-pchat.setOption(option);
+mpchat.clear(option);
+mpchat.resize(option);
+mpchat.setOption(option);
+
+
 
 

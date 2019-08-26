@@ -1,0 +1,85 @@
+
+
+.title ul{
+   /* float: right;*/
+    width: 150px;
+    height: 25px;
+    top: 10%;
+    position: absolute;
+    top: 2px;
+    left: 200px;
+}
+.title ul li{
+    width: 50px;
+    height: 20px;
+    float: left;
+    list-style-type:none;
+
+    display:inline-block;
+    color: rgba(0, 170, 255, 0.8);
+    font-family: MicrosoftYaHei;
+    font-size: 12px;
+}
+
+/********************3个单选按钮的样式********************/
+input[type="radio"]+label::before {
+    cursor: pointer;
+    content: "\a0";/*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    width: 10px;
+    height: 10px;
+    margin: auto 5px;
+    border-radius: 50%;
+    border: solid 1px rgba(56, 175, 255, 0.8);
+    padding: 4px;
+
+}
+
+/* 设置选中样式 */
+input[type="radio"]:checked+label::before {
+    background-color: #38afff;
+    background-clip: content-box;
+    padding: 2px;
+}
+
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);/* 第一种隐藏方式：剪切为0 */
+    /* visibility: hidden; */ /* 第二种隐藏方式：隐藏 */
+}
+/*******************资金投入、十三五规划样式*********************/
+.bridgeTunnel ul li{
+    float: left;
+    width: 35%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -29px;
+    margin-left: 30px;
+    cursor:pointer;
+    text-align: center;
+    font-family: 'microsoft yahei';
+    font-size: 14px;
+    color: #c3e6ff;
+    background: url("../img/xf_bg_zjtz.png") no-repeat ;
+    background-size: 100% 100%;
+}
+
+/**************图表样式**********************/
+.BriAndTun{
+    width: 350px;
+    height: 135px;
+    position: absolute;
+    top: 2px;
+    margin: 0 5px;
+
+}
+#bothLine_money,#bridgeLine_money,#tunnelLine_money,#bothLine_plan,#bridgeLine_plan,#tunnelLine_plan{
+    width: 350px;
+    height: 135px;
+}
+
+.backGroundChange{
+    background-color: #00AAFF;
+}

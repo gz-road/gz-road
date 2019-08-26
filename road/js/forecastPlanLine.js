@@ -74,15 +74,20 @@ var option = {
 
     xAxis: {
         axisLine:{
+            fontFamily:'microsoft yahei',
+            fontSize:'12px',
+            color: '#00bfff',
             lineStyle:{
                 color:'rgba(53,174,255,0.5)'
             }
         },
-        axisLabel:{
+        axisLabel: {
             interval: 0,
-            fontFamily:'microsoft yahei',
-            color: '#fff',
+            fontFamily: 'microsoft yahei',
+            fontSize:'12px',
+            color: '#00bfff',
         },
+
         axisTick:{
             show:false
         },
@@ -101,15 +106,23 @@ var option = {
             }
         },
         axisLine:{
-            show:false
+            show:false,
+            fontSize:'12px',
+            color: '#00bfff',
         },
         axisTick:{
             show:false
         },
         axisLabel: {
             fontFamily: 'microsoft yahei',
-            color: '#fff',
+            fontSize:'12px',
+            color: '#00bfff',
         },
+       /* axisLabel: {
+            fontFamily: 'microsoft yahei',
+            fontSize:'12px',
+            color: '#00bfff',
+        },*/
     },
     series: [
         {

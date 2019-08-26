@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9361614-ad0b-4b7d-9c7c-3532761bb6a0" name="Default Changelist" comment="">
+    <list default="true" id="d9361614-ad0b-4b7d-9c7c-3532761bb6a0" name="Default Changelist" comment="代码更新">
       <change afterPath="$PROJECT_DIR$/road/js/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/road/css/baseall.css" beforeDir="false" afterPath="$PROJECT_DIR$/road/css/baseall.css" afterDir="false" />
@@ -24,13 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1PibhoBVnwtc79nyhJBDl587dcx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/webStromworkingSpace/html" />
+    <property name="last_opened_file_path" value="D:/webStromworkingSpace" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -77,6 +78,7 @@
       <workItem from="1566389061475" duration="4543000" />
       <workItem from="1566437279864" duration="24760000" />
       <workItem from="1566523000102" duration="11205000" />
+      <workItem from="1566781707288" duration="20438000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1566200083700</created>

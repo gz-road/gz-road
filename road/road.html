@@ -12,6 +12,8 @@
     <link href="css/baseall.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
     <link href="css/roadTSF.css" rel="stylesheet" type="text/css"/>
+    <link href="css/BridgeAndTunnel.css" rel="stylesheet" type="text/css"/>
+
     <!--引入js文件-->
     <script src="./jquery/jquery2.1.1.min.js"></script>
     <script src="./bootstrap/js/bootstrap.js"></script>
@@ -283,9 +285,37 @@
                         <div class="border col-sm-12 col-row-h100">
                             <div class="title">
                                 <h3 class="titleall">桥隧技术状况预测</h3>
+								<ul>
+                                    <li><input  type="radio" name="TheWay"  id="all"/><label for="all">全部</label></li>
+                                    <li><input  type="radio" name="TheWay"  id="bridge"/><label for="bridge">桥梁</label></li>
+                                    <li><input  type="radio" name="TheWay"  id="tunnel"/><label for="tunnel">隧道</label></li>
+                                </ul>
                             </div>
                             <div class="inner_content">
-                                <div class="progressBar">数据加载中，请稍等...</div>
+                                <div class="progressBar">
+									<div class="twoWay">
+										<div class="bridgeTunnel">
+											<ul>
+												<li id="M_all">资金投入</li>
+												<li id="P_all">十三五规划</li>
+											</ul>
+										</div>
+										<div class="BriAndTun">
+											<div id="bothLine_money"></div>
+											<div id="bridgeLine_money" class="picture_one"></div>
+											<div id="tunnelLine_money" class="picture_one"></div>
+                                            <div id="bothLine_plan" class="picture_one"></div>
+                                            <div id="bridgeLine_plan" class="picture_one"></div>
+                                            <div id="tunnelLine_plan" class="picture_one"></div>
+                                            <script type="text/javascript" src="js/M_BothBridgeAndTunnel.js"></script>
+                                            <script type="text/javascript" src="js/M_bridge.js"></script>
+                                            <script type="text/javascript" src="js/M_tunnel.js"></script>
+                                            <script type="text/javascript" src="js/P_BothBridgeAndTunnel.js"></script>
+                                            <script type="text/javascript" src="js/P_bridge.js"></script>
+                                            <script type="text/javascript" src="js/P_tunnel.js"></script>
+										</div>
+									</div>
+								</div>
                             </div>
                         </div>
                     </div>
@@ -314,5 +344,6 @@
             interTime:50
         });
 </script>
+<script type="text/javascript" src="js/Radio.js"></script>
 
 </html>

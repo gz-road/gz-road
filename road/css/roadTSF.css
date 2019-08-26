@@ -13,13 +13,12 @@
     line-height: 30px;
     margin-top: -24px;
     margin-left: 30px;
-
-    color: rgba(0, 170, 255, 0.8);
     cursor:pointer;
     text-align: center;
     font-family: 'microsoft yahei';
     font-size: 14px;
-    background: url("../img/xf_bg_zjtz.png") no-repeat #5bc0de;
+    color: #c3e6ff;
+    background: url("../img/xf_bg_zjtz.png") no-repeat ;
     background-size: 100% 100%;
 
 
