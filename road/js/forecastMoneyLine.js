@@ -1,9 +1,6 @@
 
 var pchat = echarts.init(document.getElementById('forecast_moneyLine'))
 var option = {
-    /*title: {
-        text: '多种资金百分比'
-    },*/
     //用formatter回调函数显示多项数据内容
     tooltip: {
         trigger: 'axis',
@@ -54,7 +51,7 @@ var option = {
         textStyle:{
             fontFamily:'microsoft yahei',
             fontSize:12,
-            color:'#fff',
+            color:'#00AAFF',
         },
         data:[
             { name:'0%', icon:'rect',},

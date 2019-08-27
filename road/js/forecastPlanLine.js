@@ -49,19 +49,17 @@ var option = {
         itemWidth:10,
         itemHeight:2,
         itemGap:10,
-        left:90,
+        left:180,
         top:2,
         textStyle:{
             fontFamily:'microsoft yahei',
             fontSize:12,
-            color:'#fff',
+            color:'#00AAFF',
         },
         data:[
-            { name:'0%', icon:'rect',},
-            { name:'25%', icon:'rect',},
-            { name:'50%', icon:'rect',},
-            { name:'75%', icon:'rect',},
-            { name:'100%', icon:'rect',}
+            { name:'正常情况', icon:'rect',},
+            { name:'十三五规划', icon:'rect',},
+
         ]
     },
     grid: {
@@ -126,7 +124,7 @@ var option = {
     },
     series: [
         {
-            name:'100%',
+            name:'十三五规划',
             type:'line',
             /*symbol:'circle',*/
             symbolSize:5,
@@ -143,7 +141,7 @@ var option = {
             data:[70,80,50]
         },
         {
-            name:'100%',
+            name:'十三五规划',
             type:'line',
             /*  symbol:'circle',*/
             symbolSize:5,
@@ -161,7 +159,7 @@ var option = {
         },
         /******************************/
         {
-            name:'75%',
+            name:'正常情况',
             type:'line',
             /* symbol:'circle',*/
             symbolSize:5,
@@ -193,7 +191,7 @@ var option = {
             data:[50,49,36]
         },
         {
-            name:'75%',
+            name:'正常情况',
             type:'line',
             /* symbol:'circle',*/
             symbolSize:5,
@@ -209,112 +207,7 @@ var option = {
             },
             data:["-", "-",36,58,59,63]
         },
-        /*************************************/
-        {
-            name:'50%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
 
-            itemStyle:{
-                normal:{
-                    color:'#ffff33',
-                    lineStyle:{
-                        width:3,
-                    }
-                }
-            },
-            data:[39,58,40]
-        },
-        {
-            name:'50%',
-            type:'line',
-            /*  symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,   //关键点，为true是不支持虚线，实线就用true
-            itemStyle:{
-                normal:{
-                    color:'#ffff33',
-                    lineStyle:{
-                        width:3,
-                        type:'dotted'  //'dotted'虚线 'solid'实线
-                    }
-                }
-            },
-            data:["-", "-",40,50,52,40]
-        },
-        /*******************25%***************************/
-        {
-            name:'25%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
-
-            itemStyle:{
-                normal:{
-                    color:'#009fcc',
-                    lineStyle:{
-                        width:3,
-                    }
-                }
-            },
-            data:[20,10,10]
-        },
-        {
-            name:'25%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
-
-            itemStyle:{
-                normal:{
-                    color:'#009fcc',
-                    lineStyle:{
-                        width:3,
-                        type:'dotted'  //'dotted'虚线 'solid'实线
-                    }
-                }
-            },
-            data:["-", "-",10,15,8,7]
-        },
-        /************0%***************/
-        {
-            name:'0%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,
-
-            itemStyle:{
-                normal:{
-                    color:'#00ffaa',
-                    lineStyle:{
-                        width:3,
-                    }
-                }
-            },
-            data:[2,19,1]
-        },
-        {
-            name:'0%',
-            type:'line',
-            /* symbol:'circle',*/
-            symbolSize:5,
-            smooth:true,   //关键点，为true是不支持虚线，实线就用true
-            itemStyle:{
-                normal:{
-                    color:'#00ffaa',
-                    lineStyle:{
-                        width:3,
-                        type:'dotted'  //'dotted'虚线 'solid'实线
-                    }
-                }
-            },
-            data:["-", "-",1,4,0,3]
-        },
     ]
 }
 pchat.clear();

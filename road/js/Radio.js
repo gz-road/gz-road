@@ -1,73 +1,40 @@
-function selectOne() {
-    /*$('#all').attr('checked', 'true')*/
-    $("#all").click(function () {
+
+function checkedOne() {
+    //默认被选中
+    /*$('#bridge').attr('checked', 'true');*/
+
+   /* if(document.getElementById('bridge').checked == true){
+        /!*css("background-color","#38afff");*!/
         $("#M_all").click(function () {
-            $("#bothLine_money").show();
+            $("#M_bridge").show();
             $("#M_all").addClass('backGroundChange');
-            $("#bothLine_plan").hide();
-            $("#tunnelLine_money").hide();
-            $("#tunnelLine_plan").hide();
-            $("#bridgeLine_money").hide();
-            $("#bridgeLine_plan").hide();
-
+            $("#M_all").siblings().removeClass('backGroundChange')
+            $("#M_bridge").siblings().hide();
         })
-    })
-
-    $("#all").click(function () {
         $("#P_all").click(function () {
-            $("#bothLine_plan").show();
-
-            $("#bothLine_money").hide();
-            $("#bridgeLine_money").hide();
-            $("#bridgeLine_plan").hide();
-            $("#tunnelLine_money").hide();
-            $("#tunnelLine_plan").hide();
+            $("#P_bridge").show();
+            $("#P_all").addClass('backGroundChange');
+            $("#P_all").siblings().removeClass('backGroundChange')
+            $("#P_bridge").siblings().hide();
         })
-    })
 
-    $("#bridge").click(function () {
+    }else if(document.getElementById('tunnel').checked == true){
         $("#M_all").click(function () {
-            $("#bridgeLine_money").show();
-            $("#bridgeLine_plan").hide();
-            $("#tunnelLine_money").hide();
-            $("#tunnelLine_plan").hide();
-            $("#bothLine_money").hide();
-            $("#bothLine_plan").hide();
+            $("#M_tunnel").show();
+            $("#M_all").addClass('backGroundChange');
+            $("#M_all").siblings().removeClass('backGroundChange') ;
+            $("#M_tunnel").siblings().hide();
         })
-    });
 
-    $("#bridge").click(function () {
         $("#P_all").click(function () {
-            $("#bridgeLine_plan").show();
-            $("#bridgeLine_money").hide();
-            $("#tunnelLine_money").hide();
-            $("#tunnelLine_plan").hide();
-            $("#bothLine_money").hide();
-            $("#bothLine_plan").hide();
+            $("#P_tunnel").show();
+            $("#P_all").addClass('backGroundChange');
+            $("#p_all").siblings().removeClass('backGroundChange') ;
+            $("#P_tunnel").siblings().hide();
         })
-    })
+    }
+*/
 
-    $("#tunnel").click(function () {
-        $("#M_all").click(function () {
-            $("#tunnelLine_money").show();
-            $("#bridgeLine_money").hide();
-            $("#tunnelLine_plan").hide();
-            $("#bridgeLine_money").hide();
-            $("#bothLine_money").hide();
-            $("#bothLine_plan").hide();
-        })
-    })
 
-    $("#tunnel").click(function () {
-        $("#P_all").click(function () {
-            $("#tunnelLine_plan").show();
-            $("#tunnelLine_money").hide();
-            $("#bridgeLine_money").hide();
-            $("#bridgeLine_plan").hide();
-            $("#bothLine_money").hide();
-            $("#bothLine_plan").hide();
-        })
-    })
 }
-
-selectOne();
+checkedOne();

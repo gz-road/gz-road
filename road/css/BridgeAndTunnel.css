@@ -6,8 +6,8 @@
     height: 25px;
     top: 10%;
     position: absolute;
-    top: 2px;
-    left: 200px;
+    top: 5px;
+    left: 250px;
 }
 .title ul li{
     width: 50px;
@@ -50,6 +50,10 @@ input[type="radio"] {
     /* visibility: hidden; */ /* 第二种隐藏方式：隐藏 */
 }
 /*******************资金投入、十三五规划样式*********************/
+.bridgeTunnel ul li:hover, .bridgeTunnel ul li.on{
+    background-color: #5bc0de;
+}
+
 .bridgeTunnel ul li{
     float: left;
     width: 35%;
@@ -66,6 +70,7 @@ input[type="radio"] {
     background-size: 100% 100%;
 }
 
+
 /**************图表样式**********************/
 .BriAndTun{
     width: 350px;
@@ -75,7 +80,7 @@ input[type="radio"] {
     margin: 0 5px;
 
 }
-#bothLine_money,#bridgeLine_money,#tunnelLine_money,#bothLine_plan,#bridgeLine_plan,#tunnelLine_plan{
+#M_bridge,#P_bridge,#M_tunnel,#P_tunnel{
     width: 350px;
     height: 135px;
 }
