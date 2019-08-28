@@ -1,0 +1,232 @@
+ul, li {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+/*天气预报样式*/
+.top-content{
+	position: relative;
+}
+.weather{
+	position: absolute;
+	top:0px;
+	left: -20px;
+}
+/*顶部导航菜单及定位*/
+.menu-right{
+	position: absolute;
+	right: 20px;
+	top:0px;
+	z-index: 1;
+	padding-top:20px;
+}
+.menu-right .address .addr-from{
+	float: right;
+}
+.menu-right .menu-box select{
+	float: right;
+}
+.menu-right .addr-icon{
+	float: left;
+	padding-top:8px;
+}
+.menu-right .menu-icon{
+	float: left;
+}
+.menu-right .address{
+	float: left;
+	margin-right: 10px;
+}
+.menu-right .menu-box{
+	float: right;
+}
+.form-control {
+    display: block;
+    width: 80px;
+    height: 34px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+   background: transparent;
+    background-image: none;
+    border:none;
+    overflow: hidden;
+}
+.form-control2 {
+   width: 120px !important;
+}
+.form-control:focus {
+    outline: 0;
+     -webkit-box-shadow:none;
+    box-shadow:none;
+}
+.form-control option{
+	color: #000000;
+}
+.top-line{
+	border: 0.5px solid #094581;
+	margin-right: 16px;
+	line-height: 32px;
+}
+/*.menu-right .address .addr-p{
+	content: url(../img/icon_screen_qy.png);
+    margin: 0 0 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+=======
+/*路网资产*/
+.half {
+
+}
+/* 地图 */
+#map1, #map2, #map3, #map4  {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*地图图例*/
+.legend {
+    position: absolute;
+    bottom: 18px;
+    left: 30px;
+    height: 25px;
+}
+.legend_block {
+    width: 72px;
+    height: 100%;
+    float: left;
+    margin: 0 10px 0 0;
+    background:url(../img/legend_bg.png) center center no-repeat;
+    background-size:100% 100%; ;
+}
+p.legend_name {
+    font-size: 12px;
+    line-height: 25px;
+    margin: 0;
+}
+span.color_block {
+    width: 8px;
+    height: 8px;
+    background-color: #b87a97;
+    float: left;
+    margin: 8px 10px 0 13px;
+    vertical-align: middle;
+}
+.legend div:nth-child(2) span.color_block {
+    background-color: #515ebf;
+}
+.legend div:nth-child(3) span.color_block {
+    background-color: #3085ee;
+}
+.legend div:nth-child(4) span.color_block {
+    background-color: #33dcda;
+}
+.legend div:nth-child(5) span.color_block {
+    background-color: #a9814c;
+}
+
+
+>>>>>>> d99bb210125423807c8a81771b23d31587f9330f
+/*工程建设状态*/
+.project_status { width: 100%; height: 100%; margin: 0; padding: 0 10px; }
+.list_name { width: 100%; height: 15%; margin: 0; padding: 0; }
+ul.list_road { width: 100%; height: 100%; margin: 0; padding: 0; list-style: none; }
+ul.list_road li { width: 100%; height: 35px; margin: 0; padding: 0; }
+.list_content li:nth-child(2n-1) {
+    background-color: rgba(0, 170, 255, 0.1);
+    border-bottom: 1px dashed rgba(24, 158, 255, 0.3);
+    border-top: 1px dashed rgba(24, 158, 255, 0.3);
+}
+.project_status ul li p.categary_name { width: 19%; height: 100%; float: left; margin: 0; font-size: 12px; line-height: 34px; color: #00aaff; overflow: hidden; }
+.project_status .list_name ul li p.categary_name {
+    color: #fff;
+}
+.project_status ul li p.speed_high {
+    color: #37de91;
+}
+.project_status ul li p.speed_mid {
+    color: #ffcc51;
+}
+.project_status ul li p.speed_low {
+    color: #ff566e;
+}
+ul.list_road li p.categary_name:first-child { padding: 0 0 0 5px; }
+ul.list_road li p.categary_name:nth-child(2) { width: 22%; }
+ul.list_road li p.categary_name:nth-child(3) { width: 15%; }
+ul.list_road li p.categary_name:nth-child(4) { width: 19%; }
+ul.list_road li p.categary_name:nth-child(5) { width: 11%; }
+ul.list_road li p.categary_name:nth-child(6) { width: 14%; }
+/* 实时路况滚动 */
+.txtMarquee-top{ width:100%; height: 84%;  overflow:hidden; position:relative;  }
+.txtMarquee-top .bd{ padding:0; }
+
+/* 地图选项卡切换 */
+.slideTxtBox{width: 100%; height: 100%; text-align:left;}
+.slideTxtBox .hd{width: 74%;height: 52px;position: absolute; z-index:1;top: 30px; left: 14%;}
+.slideTxtBox .hd ul{width:100%;float:left;margin: 0 auto;padding: 0;height: 52px;display: flex;
+    flex-wrap: nowrap;}
+.slideTxtBox .hd ul li{
+    float:left;
+    width: 25%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 52px;
+    text-align: center;
+    color: rgba(0, 170, 255, 0.8);
+    cursor:pointer;
+    margin: 0;
+    padding: 0 5px;
+    background: url(../img/map_tab_no.png) no-repeat;
+    background-size:100% 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.slideTxtBox .hd ul li.on{color: #fff;}
+.slideTxtBox .hd ul li:last-child { margin: 0; }
+.slideTxtBox .hd ul li:hover, .slideTxtBox .hd ul li.on{
+    background:url(../img/map_tab_pr.png) center center no-repeat;background-size:100% 100%; }
+.slideTxtBox .bd {height: 100%;width: 100%;}
+.slideTxtBox .bd ul, .slideTxtBox .bd ul li {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 1366px) {
+    /*工程建设状态列表*/
+    .project_status {
+        padding: 0 6px;
+    }
+    ul.list_road li {
+        height: 30px;
+    }
+    .project_status ul li p.categary_name {
+        width: 16%;
+        font-size: 12px;
+        line-height: 29px;
+    }
+    ul.list_road li p.categary_name:nth-child(2) {width: 18%;}
+    ul.list_road li p.categary_name:nth-child(3) {width: 18%;}
+    ul.list_road li p.categary_name:nth-child(4) { width: 19%;}
+    ul.list_road li p.categary_name:nth-child(5) {width: 9%;}
+    ul.list_road li p.categary_name:nth-child(6) {width: 19%;}
+    .txtMarquee-top{ height: 83%; }
+    /*地图切换卡*/
+    .slideTxtBox .hd{width: 74%;height: 42px;position: absolute;top: 24px; left: 14%;}
+    .slideTxtBox .hd ul{height: 42px;}
+    .slideTxtBox .hd ul li{
+        font-size: 14px;
+        line-height: 42px;
+    }
+}
+
+
+
+
+

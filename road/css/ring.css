@@ -1,0 +1,12 @@
+@charset "UTF-8";
+	/* 饼图样式 */
+	#ring {
+		position: absolute;
+		width: 328px;
+		height: 200px;
+		margin-left: 10px;
+		margin-top: -42px;
+	}
+	
+	
+

@@ -1,0 +1,161 @@
+/*实物工程量*/
+.inner_content ul{
+	width:100%;
+	height:100%;
+}
+.inner_content ul.inn-box li{
+	width:44%;
+	line-height: 34px;
+	background-image: url(../img/road2/swgcl_bg.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	float:left;
+	margin: 12px 0px 12px 14px;
+}
+/*实物工程量图标*/
+.inner_content ul li .r1:before{
+	content: url(../img/road2/icon_lj.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li .r2:before{
+	content: url(../img/road2/icon_lvh.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li .r3:before{
+	content: url(../img/road2/icon_jc.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li .r4:before{
+	content: url(../img/road2/icon_yxss.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li .r5:before{
+	content: url(../img/road2/icon_lm.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li .r6:before{
+	content: url(../img/road2/icon_yjcl.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li .r7:before{
+	content: url(../img/road2/icon_qsh.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li .r8:before{
+	content: url(../img/road2/icon_psss.png);
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner_content ul li span:first-child{
+	float: left;
+	font-size: 12px;
+	color:#FFFFFF;
+}
+.inner_content ul li span:last-child{
+	float: right;
+	font-size: 14px;
+	color: #f5c552;
+}
+/*交通分析量*/
+#bar03{
+	width:90%;
+	height: 100%;
+	float: left;
+}
+/*
+.traff-icon{
+	float: left;
+	margin-left: 14px;
+}*/
+.traff-icon{
+	width: 6%;
+    height: 96%;
+    float: left;
+    margin: 3.5% 0 0 4%;
+}
+.traff-icon ul{
+width: 100%;
+height: 100%;
+/*position: absolute;
+top:34px;
+left: 18px;*/
+}
+.traff-icon ul li{
+	/*line-height: 29px;*/
+	height: 12.5%;
+}
+.traff-icon .traff-u li:first-child:before{
+	content: url(../img/road2/NO1.png);
+    display: inline-block;
+    vertical-align: middle;
+}
+.traff-icon .traff-u li:nth-child(2):before{
+	content: url(../img/road2/NO2.png);
+    display: inline-block;
+    vertical-align: middle;
+}
+.traff-icon .traff-u li:nth-child(3):before{
+	content: url(../img/road2/NO3.png);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 1440px) {
+.inner_content ul.inn-box li {
+   margin: 16px 0px 0px 10px;
+}
+}
+@media (max-width: 1366px) {
+.traff-icon{
+    margin: 2.6% 0 0 4%;
+}
+.inner_content ul.inn-box li {
+   margin: 10px 0px 0px 10px;
+}
+}
+@media (max-width: 1280px) {
+.traff-icon{
+    margin: 3% 0 0 4%;
+}
+.inner_content ul.inn-box li {
+    margin: 12px 0px 12px 10px;
+}
+.inner_content ul li span:first-child {
+    font-size: 10px;
+}
+.inner_content ul li span:last-child {
+    font-size: 12px;
+}
+}
+@media (max-width: 960px) {
+.inner_content ul.inn-box li {
+   margin: 20px 0px 0px 32px;
+}
+}
+@media (max-height: 650px) {
+.traff-icon{
+    margin: 2% 0 0 4%;
+}
+.inner_content ul.inn-box li {
+    margin: 10px 0px 0px 12px;
+    line-height: 28px;
+}
+}
+
